@@ -23,7 +23,7 @@
       </form>
 
       <div class="cart_header">
-        <div class="icon_cart">
+        <div onclick="openCart()" class="icon_cart">
           <i class="fas fa-shopping-cart"></i>
           <span class="count_item">0</span>
         </div>
@@ -50,5 +50,45 @@
       </div>
     </nav>
   </header>
+
+  <div class="cart">
+    <div class="top_cart">
+      <h3>My Cart <span>(0 Item in cart)</span></h3>
+      <span class="close_cart" onclick="closeCart()"><i class="fas fa-times"></i></span>
+    </div>
+
+    <div class="items_in_cart">
+      <div class="item_cart">
+        <img src="img/product/product-1.jpg" alt="">
+        <div class="content">
+          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          <p class="price_cart">$0</p>
+        </div>
+        <button class="delete_item"><i class="fa-solid fa-trash"></i></i></button>
+      </div>
+      <div class="item_cart">
+        <img src="img/product/product-2.jpg" alt="">
+        <div class="content">
+          <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+          <p class="price_cart">$0</p>
+        </div>
+        <button class="delete_item"><i class="fa-solid fa-trash"></i></i></button>
+      </div>
+    </div>
+
+    <div class="bottom_cart">
+      <div class="total">
+        <p>Total:</p>
+        <p class="price_cart_total">$0</p>
+      </div>
+
+      <div class="button_cart">
+        <a href="#" class="btn_cart">Proceed to checkout</a>
+        <button class="btn_cart trans_bg">Continue shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
