@@ -10,7 +10,11 @@
 
    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-</head>
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  </head>
 <body>
   
   <!-- Header -->
@@ -103,9 +107,49 @@
         <a href="#">Jewelry & Watchers</a>
         <a href="#">TV & Audio</a>
       </div>
+
+      <!-- Swiper -->
+  <div class="slide-swp mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="#">
+          <img src="img/slider-02.jpg" alt="">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <img src="img/slider-03.jpg" alt="">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <img src="img/slider-01.jpg" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
     </div>
   </section>
 
   <script src="js/main.js"></script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullests: true,
+        clickable: true,
+      },
+      autoplay: {
+        delay: 2500,
+      },
+      loop: true,
+    });
+  </script>
 </body>
 </html>
