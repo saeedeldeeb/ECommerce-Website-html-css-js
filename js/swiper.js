@@ -16,7 +16,6 @@ var swiper = new Swiper('.slide-swp', {
 
 var swiper = new Swiper('.sale_sec', {
   pagination: {
-    el: '.swiper-pagination',
     dynamicBullests: true,
     clickable: true,
   },
