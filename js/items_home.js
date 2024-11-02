@@ -3,6 +3,7 @@ fetch('js/items.json')
   .then((data) => {
     const swiper_items_sale = document.getElementById('swiper_items_sale');
 
+    all_products_json = data;
     data.forEach((item) => {
       if (item.old_price) {
         const sale_percent = Math.floor(
@@ -13,7 +14,7 @@ fetch('js/items.json')
 
             <div class="icons">
               <span><i class="fa-solid fa-heart"></i></span>
-              <span><i class="fa-solid fa-shopping-cart"></i></span>
+              <span><i onclick="addToCart(${item.id}, this)" class="fa-solid fa-shopping-cart"></i></span>
               <span><i class="fa-solid fa-share"></i></span>
             </div>
             <span class="sale_percent">%${sale_percent}</span>
