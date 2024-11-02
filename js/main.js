@@ -33,10 +33,26 @@ function getCartItems() {
           <h4>${item.name}</h4>
           <p class="price_cart">$${item.price}</p>
         </div>
-        <button class="delete_item"><i class="fa-solid fa-trash"></i></i></button>
+        <button onClick="deleteItemCart(${item.id})" class="delete_item"><i class="fa-solid fa-trash"></i></i></button>
       </div>
     `;
   });
 
   items_in_cart.innerHTML = items;
+}
+
+function deleteItemCart(index) {
+  product_cart = product_cart.filter((product) => product.id !== index);
+  getCartItems();
+  console.log(product_cart);
+
+  const icons = document.querySelectorAll('.fa-shopping-cart');
+  icons.forEach((icon, idx) => {
+    icon.classList.remove('active');
+    product_cart.forEach((product) => {
+      if (product.id === idx) {
+        icon.classList.add('active');
+      }
+    });
+  });
 }
