@@ -470,6 +470,10 @@ header .links .loging_signup a{
   z-index: 100;
 }
 
+.banner.banner_big .container .banner_img{
+  width: 49%;
+}
+
 /* end banner */
 
 .slide{
@@ -640,9 +644,12 @@ header .links .loging_signup a{
   font-weight: normal;
 }
 
+.slide .container{
+  position: relative;
+}
+
 .slide .container .mySwiper{
   overflow: hidden;
-  position: relative;
   padding: 10px;
 }
 .slide .container .mySwiper .btn_swip{
@@ -662,4 +669,26 @@ header .links .loging_signup a{
 
 .slide .container .mySwiper .btn_swip.swiper-button-prev{
   left: calc(100% - 90px);
+}
+
+/* other slide product */
+.slide_products .product_swip{
+  width: calc(100% - 300px);
+}
+
+.slide_products .slide_with_img{
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide_products .categ_img{
+  padding: 10px 0;
+  width: 280px;
+}
+
+.slide_products .categ_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }

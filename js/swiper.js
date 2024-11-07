@@ -30,3 +30,20 @@ var swiper = new Swiper('.sale_sec', {
   },
   loop: true,
 });
+
+var swiper = new Swiper('.product_swip', {
+  pagination: {
+    dynamicBullests: true,
+    clickable: true,
+  },
+  slidesPerView: 4,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+});
