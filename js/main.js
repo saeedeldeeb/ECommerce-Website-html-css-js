@@ -23,7 +23,14 @@ function addToCart(id, element) {
   getCartItems();
 }
 
+let count_item = document.querySelector('.count_item');
+let price_cart_head = document.querySelector('.price_cart_head');
+let count_item_cart = document.querySelector('.count_item_cart');
+let price_cart_total = document.querySelector('.price_cart_total');
+
 function getCartItems() {
+  let total_price = 0;
+
   let items = '';
   product_cart.forEach((item) => {
     items += `
@@ -36,9 +43,15 @@ function getCartItems() {
         <button onClick="deleteItemCart(${item.id})" class="delete_item"><i class="fa-solid fa-trash"></i></i></button>
       </div>
     `;
+
+    total_price += item.price;
   });
 
   items_in_cart.innerHTML = items;
+  price_cart_head.innerHTML = `$${total_price}`;
+  count_item.innerHTML = product_cart.length;
+  count_item_cart.innerHTML = product_cart.length;
+  price_cart_total.innerHTML = `$${total_price}`;
 }
 
 function deleteItemCart(index) {
