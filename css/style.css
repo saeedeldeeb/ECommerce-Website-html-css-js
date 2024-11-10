@@ -755,3 +755,19 @@ header .links .loging_signup a{
   font-size: 18px;
   color: #222222;
 }
+
+/* footer */
+
+.back_to_top{
+  background: #4d5669;
+}
+
+.back_to_top p{
+  padding: 22px 0;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
